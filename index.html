@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Maze</title>
+  <style>
+    body {
+      font-family: "Century Gothic";
+      font-size: 16px;
+    }
+
+    #container {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    #mycanvas {
+      /* background: #AAEDFF; */
+      /* background: rgba(172,246,194, 0.9); */
+      background: white;
+    }
+
+    .btn {
+      margin: 3px auto;
+      width: 200px;
+      padding: 5px;
+      /* background-color: #00AAFF; */
+      background-color: rgb(178,155,228);
+      color: #FFFFFF;
+      border-radius: 3px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      opacity: 0.5;
+    }
+
+    #title {
+      text-align: center;
+      padding: 10px;
+    }
+
+    #title h1 {
+      margin: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #start {
+      margin: 50px auto;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 10px;
+    }
+
+    .exp {
+      width: 280px;
+      margin: 20px auto;
+      /* text-align: center; */
+    }
+
+    .cen {
+      text-align: center;
+    }
+
+    #reset {
+      margin-top: 25px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id='title'>
+    <h1>
+      非常に楽しいゲーム
+    </h1>
+  </div>
+  <div id="expBox">
+    <div id="start" class="btn">START</div>
+    <div class="exp">
+      [説明] WASDキーでドットを操作して右下のゴールにたどり着きましょう！<br>
+      ステージは５つまであります。<br>
+      目指せ記録更新
+    </div>
+    <div class="exp cen">
+      ⬆︎ STARTボタンでスタート！
+    </div>
+  </div>
+
+  <div id='container' class="hidden">
+    <canvas width="100" height="100" id="mycanvas">
+      Canvas not supported.
+    </canvas>
+    <div id="time"></div>
+    <div id="reset" class="btn">RETRY</div>
+  </div>
+
+  <script src='js/main.js'></script>
+</body>
+</html>
